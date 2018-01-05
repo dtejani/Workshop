@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
-var config = require('./config/datase');
+var config = require('./config/database');
 var hobby = require('./controllers/hobby');
 
 //Connect mongoose to our database
