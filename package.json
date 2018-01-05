@@ -1,0 +1,25 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "Let's see what I can do",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtejani/Workshop.git"
+  },
+  "dependencies": {
+    "express": "~4.15.3",
+    "mongoose": "~4.11.0",
+    "cors": "~2.8.3",
+    "body-parser": "~1.17.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtejani/Workshop/issues"
+  },
+  "homepage": "https://github.com/dtejani/Workshop#readme"
+}
