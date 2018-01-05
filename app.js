@@ -4,12 +4,17 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
+var config = require('./config/datase');
+var hobby = require('./controllers/hobby');
 
-//Initialize app variable
-var app = express();
+//Connect mongoose to our database
+mongoose.connect(config.database);
 
 //Declaring port
 var port = 8080;
+
+//Initialize app variable
+var app = express();
 
 //Middleware for CORS
 app.use(cors());
@@ -28,11 +33,10 @@ app.get('/', (req,res) =>{
     res.send("Invalid page");
 });
 
+//Routing all HTTP requests to /hobby to hobby controller
+app.use('/hobby', hobby);
+
 //Listen to port 8080
 app.listen(port, () =>{
     console.log('Magic happens on port 8080');
-})
-
-//Connect mongoose to our database
-var config = require('./config/datase');
-mongoose.connect(config.database);
+});
